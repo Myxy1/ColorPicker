@@ -19,12 +19,14 @@ public class MainActivity extends AppCompatActivity {
     private int blue = 0;
     private int green = 0;
     private FrameLayout hatter;
+    private TextView eredmeny;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         hatter = (FrameLayout)findViewById(R.id.hatter);
+        eredmeny = (TextView) findViewById(R.id.eredmeny);
         seekbar();
         hatter.setBackgroundColor(Color.rgb(red, green, blue));
 
@@ -57,12 +59,14 @@ public class MainActivity extends AppCompatActivity {
                         red = progress_value;
                         text_view.setText("Red : " + red);
                         hatter.setBackgroundColor(Color.rgb(red,green,blue));
+                        eredmeny.setText("(" + red + "," + green + "," + blue + ")");
                         //Toast.makeText(MainActivity.this, "SeekBar in progress", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onStartTrackingTouch(SeekBar seekBar) {
                         hatter.setBackgroundColor(Color.rgb(red,green,blue));
+                        eredmeny.setText("(" + red + "," + green + "," + blue + ")");
                         //Toast.makeText(MainActivity.this, "SeekBar in StartTracking", Toast.LENGTH_LONG).show();
                     }
 
@@ -70,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onStopTrackingTouch(SeekBar seekBar) {
                         text_view.setText("Red : " + red);
                         hatter.setBackgroundColor(Color.rgb(red,green,blue));
+                        eredmeny.setText("(" + red + "," + green + "," + blue + ")");
                         //Toast.makeText(MainActivity.this, "SeekBar in StopTracking", Toast.LENGTH_LONG).show();
                     }
                 }
@@ -86,12 +91,14 @@ public class MainActivity extends AppCompatActivity {
                         green = progress_value;
                         text_view2.setText("Green : " + green);
                         hatter.setBackgroundColor(Color.rgb(red,green,blue));
+                        eredmeny.setText("(" + red + "," + green + "," + blue + ")");
                         //Toast.makeText(MainActivity.this, "SeekBar in progress", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onStartTrackingTouch(SeekBar seekBar2) {
                         hatter.setBackgroundColor(Color.rgb(red,green,blue));
+                        eredmeny.setText("(" + red + "," + green + "," + blue + ")");
                         //Toast.makeText(MainActivity.this, "SeekBar in StartTracking", Toast.LENGTH_LONG).show();
                     }
 
@@ -99,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onStopTrackingTouch(SeekBar seekBar2) {
                         text_view2.setText("Green : " + green);
                         hatter.setBackgroundColor(Color.rgb(red,green,blue));
+                        eredmeny.setText("(" + red + "," + green + "," + blue + ")");
                         //Toast.makeText(MainActivity.this, "SeekBar in StopTracking", Toast.LENGTH_LONG).show();
                     }
                 }
@@ -117,12 +125,14 @@ public class MainActivity extends AppCompatActivity {
                         blue = progress_value;
                         text_view3.setText("Blue : " + blue);
                         hatter.setBackgroundColor(Color.rgb(red,green,blue));
+                        eredmeny.setText("(" + red + "," + green + "," + blue + ")");
                         //Toast.makeText(MainActivity.this, "SeekBar in progress", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onStartTrackingTouch(SeekBar seekBar) {
                         hatter.setBackgroundColor(Color.rgb(red,green,blue));
+                        eredmeny.setText("(" + red + "," + green + "," + blue + ")");
                         //Toast.makeText(MainActivity.this, "SeekBar in StartTracking", Toast.LENGTH_LONG).show();
                     }
 
@@ -130,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onStopTrackingTouch(SeekBar seekBar) {
                         text_view3.setText("Blue : " + blue);
                         hatter.setBackgroundColor(Color.rgb(red,green,blue));
+                        eredmeny.setText("(" + red + "," + green + "," + blue + ")");
                         //Toast.makeText(MainActivity.this, "SeekBar in StopTracking", Toast.LENGTH_LONG).show();
                     }
                 }
